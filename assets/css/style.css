@@ -1,17 +1,9 @@
-/**
-* Template Name: Delicious - v2.2.1
-* Template URL: https://bootstrapmade.com/delicious-free-restaurant-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 body {
   font-family: "Poppins", sans-serif;
   color: #444444;
 }
+
+
 
 a {
   color: #ffb03b;
@@ -69,7 +61,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header.header-transparent {
-  background: transparent;
+  background: #0000003d;;
 }
 
 #header.header-scrolled {

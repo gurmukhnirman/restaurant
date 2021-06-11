@@ -3,7 +3,8 @@ var app                    = express();
 var mongoose               = require("mongoose");
 var bodyParser             = require("body-parser");
 const menu                 = require("./views/models/menu");
-var seedB                 = require("./seed.js");
+const booked_tables        = require("./views/models/booked_table");
+var seedB                  = require("./seed.js");
 
 //connecting to mongoose
 var key1= "nirmangursahib";
@@ -25,7 +26,7 @@ app.use(express.static( __dirname + "/assets"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-// seedB();
+seedB();
 
 app.get("/",(req,res)=>{
     console.log("showing home page");
@@ -38,6 +39,7 @@ app.get("/",(req,res)=>{
 })
 
 app.get("/menu/new", (req,res) =>{
+    console.log("came to the menu get route");
     res.render("menu/new");
 });
 
@@ -45,6 +47,24 @@ app.post("/menu", (req,res) =>{
     menu.create(req.body.order,(err,post)=>{
         if(err)
         res.redirect('/blogs/new');
+        else{
+          res.redirect("/");
+        }
+    });
+
+});
+
+
+app.get("/book_table",(req,res)=>{
+     res.render("book_table");
+});
+
+app.post("/book_table",(req,res)=>{
+     console.log("came to the book table post route");
+     console.log(req.body.data);
+     booked_tables.create(req.body.data,(err,post)=>{
+        if(err)
+        res.redirect('book_table');
         else{
           res.redirect("/");
         }

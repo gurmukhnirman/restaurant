@@ -1,12 +1,13 @@
-var mongoose               =require("mongoose");
-var menu                   =require("./views/models/menu");
-
-
+var mongoose               = require("mongoose");
+var menu                   = require("./views/models/menu");
+const booked_tables        = require("./views/models/booked_table");
 
 function seedB(){
-    menu.remove({},(err)=>{
-      if(err) console.log("not removed");
-      else console.log("successfully removed");
+    booked_tables.remove({},(err)=>{
+      if(err) console.log("orders removed");
+      else{
+        console.log("successfully removed");
+      }
     });
 }
 
