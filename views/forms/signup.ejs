@@ -1,0 +1,42 @@
+<%- include("../partials/header") %>
+
+<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+
+<!-- REGISTRATION FORM -->
+<div class="text-center container" style="padding:50px 0; width: 300px;">
+	<div class="logo">register</div>
+	<!-- Main Form -->
+	<div class="login-form-1 mt-4">
+		<form id="register-form" method="POST" action="/signup" class="text-left">
+			<div class="login-form-main-message"></div>
+			<div class="main-login-form">
+				<div class="login-group">
+					<div class="form-group">
+						<label for="reg_username" class="sr-only">Email address</label>
+						<input type="text" class="form-control" id="reg_username" name="email" placeholder="email">
+					</div>
+					<div class="form-group">
+						<label for="reg_password" class="sr-only">Password</label>
+						<input type="password" class="form-control" id="reg_password" name="password" placeholder="password">
+					</div>
+
+					<div class="form-group">
+						<label for="reg_username" class="sr-only">Username</label>
+						<input type="text" class="form-control" id="reg_username" name="username" placeholder="username">
+					</div>
+					<div class="form-group">
+						<label for="reg_fullname" class="sr-only">Full Name</label>
+						<input type="text" class="form-control" id="reg_fullname" name="fullname" placeholder="fullname">
+					</div>
+				</div>
+				<button type="submit" class="btn btn-warning"><i class="fa fa-chevron-right"></i> submit</button>
+			</div>
+			<div class="etc-login-form">
+				<p>already have an account? <a href="#">login here</a></p>
+			</div>
+		</form>
+	</div>
+	<!-- end:Main Form -->
+</div>
+
+<%- include("../partials/footer") %>
